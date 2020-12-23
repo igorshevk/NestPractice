@@ -1,0 +1,75 @@
+{
+  "collection": "@nestjs/schematics",
+  "sourceRoot": "apps/nestjs-query-test/src",
+  "projects": {
+    "auth": {
+      "type": "library",
+      "root": "libs/auth",
+      "entryFile": "index",
+      "sourceRoot": "libs/auth/src",
+      "compilerOptions": {
+        "tsConfigPath": "libs/auth/tsconfig.lib.json"
+      }
+    },
+    "core": {
+      "type": "library",
+      "root": "libs/core",
+      "entryFile": "index",
+      "sourceRoot": "libs/core/src",
+      "compilerOptions": {
+        "tsConfigPath": "libs/core/tsconfig.lib.json"
+      }
+    },
+    "nestjs-query-test": {
+      "type": "application",
+      "root": "apps/nestjs-query-test",
+      "entryFile": "main",
+      "sourceRoot": "apps/nestjs-query-test/src",
+      "compilerOptions": {
+        "tsConfigPath": "apps/nestjs-query-test/tsconfig.app.json"
+      }
+    },
+    "fona": {
+      "type": "application",
+      "root": "apps/fona",
+      "entryFile": "main",
+      "sourceRoot": "apps/fona/src",
+      "compilerOptions": {
+        "tsConfigPath": "apps/fona/tsconfig.app.json"
+      }
+    },
+    "nestjs-crud": {
+      "type": "application",
+      "root": "apps/nestjs-crud",
+      "entryFile": "main",
+      "sourceRoot": "apps/nestjs-crud/src",
+      "compilerOptions": {
+        "tsConfigPath": "apps/nestjs-crud/tsconfig.app.json"
+      }
+    },
+    "tenant": {
+      "type": "library",
+      "root": "libs/tenant",
+      "entryFile": "index",
+      "sourceRoot": "libs/tenant/src",
+      "compilerOptions": {
+        "tsConfigPath": "libs/tenant/tsconfig.lib.json"
+      }
+    },
+    "shared": {
+      "type": "library",
+      "root": "libs/shared",
+      "entryFile": "index",
+      "sourceRoot": "libs/shared/src",
+      "compilerOptions": {
+        "tsConfigPath": "libs/shared/tsconfig.lib.json"
+      }
+    }
+  },
+  "compilerOptions": {
+    "webpack": true,
+    "tsConfigPath": "apps/nestjs-query-test/tsconfig.app.json"
+  },
+  "monorepo": true,
+  "root": "apps/fona"
+}

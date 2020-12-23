@@ -1,0 +1,54 @@
+[
+   {
+      "name": "development",
+      "type": "postgres",
+      "host": "localhost",
+      "port": 5432,
+      "username": "devsoloyoi",
+      "password": "",
+      "database": "fona",
+      "synchronize": false,
+      "logging": false,
+      "entities": [
+         "apps/fona/src/**/*.entity.ts",
+         "libs/core/src/**/*.entity.ts",
+         "libs/auth/src/**/*.entity.ts",
+         "libs/tenant/src/**/*.entity.ts"
+      ],
+      "migrations": [
+         "apps/fona/migrations/**/*.ts"
+      ],
+      "subscribers": [
+         "apps/fona/src/subscriber/**/*.ts"
+      ],
+      "cli": {
+         "migrationsDir": "apps/fona/migrations"
+      }
+   },
+   {
+      "name": "test",
+      "type": "postgres",
+      "host": "localhost",
+      "port": 5432,
+      "username": "devsoloyoi",
+      "password": "",
+      "database": "fona-test",
+      "synchronize": false,
+      "logging": false,
+      "entities": [
+         "apps/fona/src/**/*.entity.ts",
+         "libs/core/src/**/*.entity.ts",
+         "libs/auth/src/**/*.entity.ts",
+         "libs/tenant/src/**/*.entity.ts"
+      ],
+      "migrations": [
+         "apps/fona/migrations/**/*.ts"
+      ],
+      "subscribers": [
+         "apps/fona/src/subscriber/**/*.ts"
+      ],
+      "cli": {
+         "migrationsDir": "apps/fona/migrations"
+      }
+   }
+]
